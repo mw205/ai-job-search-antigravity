@@ -50,7 +50,7 @@ a hard no, not a gap to smooth over. -->
 - [Key responsibility or quantifiable achievement 1]
 - [Key responsibility or quantifiable achievement 2]
 
-## Independent Projects & Freelance
+## Independent Projects
 
 - **[PROJECT_1]**: [Brief description of architecture, problem solved, stack used, and link/demo].
 - **[PROJECT_2]**: [Brief description of architecture, problem solved, stack used, and link/demo].
@@ -68,6 +68,18 @@ a hard no, not a gap to smooth over. -->
 
 ### Cloud, AI & Engineering Tools
 - **[CATEGORY_4]**: [Cloud providers, Docker, CI/CD, LLM/GenAI tools, Git, Linux].
+
+## Publications
+
+- [Optional publication or research paper, or remove if not applicable]
+
+## Awards
+
+- [Optional award, competition, or recognition, or remove if not applicable]
+
+## References
+
+- [References available upon request / name and contact]
 
 ## Target Roles & Contract Types
 - [Target Role Type 1, e.g. Freelance Mobile/Full-Stack Projects]

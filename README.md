@@ -96,17 +96,24 @@ Antigravity's progressive disclosure, native skill discovery (`.agents/skills/`)
 
 ## Quick Start (3 Steps)
 
-### 1. Clone as a Private Repository
-
-> [!IMPORTANT]
-> Because this workspace will store your personal contact details, CV, and salary data in tracked files, **keep your repository private**.
+### 1. Fork and clone
 
 ```bash
-# Clone the template
-git clone https://github.com/mw205/ai-job-search-antigravity.git my-job-search
-cd my-job-search
+gh repo fork mw205/ai-job-search-antigravity --clone
+cd ai-job-search-antigravity
+```
 
-# Install portal CLI dependencies
+> [!IMPORTANT]
+> **A fork of this repo is always public** — GitHub does not allow private forks of
+> public repositories — and `/setup` (or `job-setup`) writes your personal data (name,
+> contact details, employment history, salary expectations) into **tracked** files.
+> If this copy is for your own job search rather than for contributing changes back,
+> use a **private repository** with this repo as `upstream` instead — the two-minute
+> recipe is in [SETUP.md section 8](SETUP.md#8-pulling-upstream-updates-into-your-fork),
+> and every update workflow works identically. Fork only to contribute.
+
+To install portal search CLI dependencies:
+```bash
 python3 tools/install_portal_clis.py
 ```
 

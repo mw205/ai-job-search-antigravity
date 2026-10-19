@@ -52,15 +52,24 @@ The CV compiles with `lualatex` (to support fontawesome6 and moderncv cleanly); 
 
 ---
 
-## 2. Fork or Clone as a Private Repo
-
-> [!WARNING]
-> This framework writes your personal contact details, CV, and work history into tracked repository files. **Keep your repository private** on GitHub to protect your personal data.
+## 2. Fork and clone
 
 ```bash
-git clone https://github.com/mw205/ai-job-search-antigravity.git my-job-search
-cd my-job-search
+gh repo fork mw205/ai-job-search-antigravity --clone
+cd ai-job-search-antigravity
+gh repo set-default <your-github-username>/ai-job-search-antigravity
 ```
+
+Or manually: fork on GitHub, then clone your fork.
+
+> [!IMPORTANT]
+> **Before you go further: forks are public.** GitHub cannot make a fork of a public
+> repository private, and `/setup` writes your personal data into **tracked**
+> files — pushing those commits to a fork publishes them. If this copy is for your own
+> job search rather than for contributing, prefer a **private repository** with this repo
+> as `upstream`: see section 8, step 1 for the exact commands and why committing your
+> personalization there is still the right move. Everything else in this guide works
+> identically either way.
 
 Install the search portal dependencies:
 ```bash
@@ -120,3 +129,21 @@ Antigravity will:
 3. Tailor your 2-page CV and 1-page cover letter.
 4. Have an adversarial reviewer subagent critique the drafts.
 5. Compile PDFs with `lualatex` and `xelatex` and verify ATS parseability.
+
+---
+
+## 8. Pulling upstream updates into your fork
+
+Upstream keeps improving the methodology files your fork has personalized, so plan for updates from day one:
+
+**Prefer releases over raw `master`.** Tagged releases are vetted checkpoints, each described in [CHANGELOG.md](CHANGELOG.md). Fetch tags with `git fetch upstream --tags` and merge a release (for example `git merge v1.0.0`) when you want stability; pull `master` directly only when you specifically want the latest unreleased changes.
+
+1. **Commit your personalization - but know where those commits land.** `/setup` (or `job-setup`) edits profile files in place; those edits are *yours*, and committing them is what lets updates merge cleanly. But a GitHub **fork of this repo is public** - forks of public repositories cannot be made private - so anything you commit *and push to a fork* is visible to anyone. If you want your profile in a remote at all, don't push it to a fork: create a **private** repository, push there, and add this repo as the `upstream` remote (`git remote add upstream https://github.com/mw205/ai-job-search-antigravity.git`) to keep receiving updates. Committing locally without pushing is also fine.
+2. **Preview what changed before pulling:**
+   ```bash
+   git remote add upstream https://github.com/mw205/ai-job-search-antigravity.git
+   git fetch upstream
+   python3 tools/check_upstream_updates.py
+   ```
+3. **Merge normally:** `git merge upstream/master` three-way-merges upstream's edits around your personalization.
+
