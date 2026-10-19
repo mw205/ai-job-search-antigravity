@@ -1,0 +1,130 @@
+%% Master CV Template - Antigravity Edition
+%% Comprehensive reference template for moderncv (banking style).
+%% Compile with: lualatex main_example.tex
+%% Verified ATS-compliant and formatted for exactly 2 pages.
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+
+% Force the name and section headings to render in moderncv blue (color1).
+\renewcommand*{\namefont}{\fontsize{32}{34}\bfseries\upshape}
+\colorlet{firstnamecolor}{color1}
+\colorlet{lastnamecolor}{color1}
+\colorlet{namecolor}{color1}
+\renewcommand*{\sectionstyle}[1]{{\sectionfont\color{color1}#1}}
+
+\usepackage[utf8]{inputenc}
+\ifpdftex\usepackage[T1]{fontenc}\fi
+\AtEndPreamble{\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=blue,
+    pdftitle={[YOUR_NAME] - CV},
+    pdfpagemode=UseNone,
+}}
+\usepackage[scale=0.82]{geometry}
+\usepackage{import}
+\usepackage{needspace}
+
+% personal data
+\name{[First]}{[Last]}
+\address{[City, Country (e.g. Open to Remote Worldwide)]}{}{}
+\phone[mobile]{[+XX XXXXXXXXXX]}
+\email{[your.email@example.com]}
+\extrainfo{\href{[https://your-portfolio.com]}{Portfolio} \textbar\ \href{[https://linkedin.com/in/your-profile]}{LinkedIn} \textbar\ \href{[https://github.com/your-username]}{GitHub}}
+
+\begin{document}
+
+\makecvtitle
+
+% ============================================================
+%     PROFILE STATEMENT
+% ============================================================
+
+\vspace{4pt}
+\small{[Write a concise 3-4 sentence profile statement tailored to your background and target roles. Focus on what makes you uniquely qualified, your engineering philosophy, key technical strengths, and quantifiable achievements. Populated automatically by the job-setup skill.]}
+
+% ============================================================
+%     CORE COMPETENCIES
+% ============================================================
+
+\section{Core Competencies}
+\vspace{1pt}
+\begin{itemize}
+\item \textbf{[Primary Discipline]}: [Key frameworks, languages, architectures, methodologies].
+\item \textbf{[Secondary Discipline]}: [Additional technical strengths, libraries, protocols].
+\item \textbf{[Backend / Systems]}: [APIs, databases, server frameworks, security, authentication].
+\item \textbf{[Cloud \& Infrastructure]}: [Cloud platforms, DevOps, Docker, monitoring, database scaling].
+\item \textbf{[AI \& Modern Tooling]}: [Applied GenAI, LLMs, automation, Git, Linux, Google Antigravity].
+\end{itemize}
+
+% ============================================================
+%     PROFESSIONAL EXPERIENCE
+% ============================================================
+
+\section{Professional Experience}
+\vspace{2pt}
+\begin{itemize}
+
+\item{\cventry{[Start Date]--Present}{[Job Title / Role]}{[Company / Independent]}{[Location / Remote]}{}{\vspace{1pt}
+\begin{itemize}
+    \item \textbf{[Project / Feature 1]}: [Quantifiable achievement, problem solved, architecture used].
+    \item \textbf{[Project / Feature 2]}: [Quantifiable achievement, impact on users or performance].
+    \item \textbf{[Project / Feature 3]}: [Key integration, security implementation, or milestone delivered].
+    \item \textbf{[Project / Feature 4]}: [Cross-functional leadership, mentoring, or technical ownership].
+\end{itemize}}}
+
+\vspace{2pt}
+
+\item{\cventry{[Start Date]--[End Date]}{[Previous Job Title]}{[Previous Company]}{[Location]}{}{\vspace{1pt}
+\begin{itemize}
+    \item \textbf{[Key Deliverable 1]}: [Scope, technologies used, and business outcome].
+    \item \textbf{[Key Deliverable 2]}: [System optimization, bug resolution rate, or feature delivery].
+\end{itemize}}}
+
+\end{itemize}
+
+% ============================================================
+%     EDUCATION
+% ============================================================
+
+\section{Education}
+\vspace{1pt}
+\begin{itemize}
+
+\item{\cventry{[Year]--[Year]}{[Degree Name / Field of Study]}{[University / Institution]}{[City, Country]}{}{\vspace{1pt}
+[Brief description of academic focus, honors, GPA, relevant coursework, or thesis topic.]
+}}
+
+\vspace{2pt}
+
+\item{\cventry{[Year]--[Year]}{[Diploma / Certification / Scholarship]}{[Institute / Academy]}{[City, Country]}{}{\vspace{1pt}
+[Intensive technical specialization, key practical projects, or professional scholarship details.]
+}}
+
+\end{itemize}
+
+% ============================================================
+%     LANGUAGES
+% ============================================================
+
+\section{Languages}
+\vspace{1pt}
+\begin{itemize}
+\item \textbf{[Primary Language]}: Native language.
+\item \textbf{[Secondary Language]}: Professional working proficiency (technical communication and documentation).
+\end{itemize}
+
+% ============================================================
+%     REFERENCES
+% ============================================================
+
+\section{References}
+\vspace{1pt}
+\begin{itemize}
+\item Available upon request.
+\end{itemize}
+
+\end{document}
