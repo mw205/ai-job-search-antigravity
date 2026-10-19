@@ -2,22 +2,34 @@
   <img src="assets/mascot/pip_flight_loop.gif" alt="Pip, the courier bird" width="180">
 </p>
 
-# AI Job Search (Google Antigravity Edition)
+# AI Job Search (Antigravity, OpenCode & Claude Code)
 
-*The autonomous job application framework that runs locally on your machine with Google Antigravity.*
+*The autonomous, multi-agent job application framework that runs locally on your machine.*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Runtime: Antigravity](https://img.shields.io/badge/Agent%20Runtime-Google%20Antigravity-4285F4.svg)](https://deepmind.google)
+[![Runtimes](https://img.shields.io/badge/Runtimes-Antigravity%20%7C%20OpenCode%20%7C%20Claude%20Code-blueviolet.svg)](#multi-runtime-support)
 [![LaTeX: LuaLaTeX%20%2B%20XeLaTeX](https://img.shields.io/badge/LaTeX-LuaLaTeX%20%7C%20XeLaTeX-008080.svg)](https://tug.org/texlive/)
 
-An AI-powered job search and application operating system built natively for **Google Antigravity**. Clone it, fill in your profile with Antigravity, and let your AI agent search portals, evaluate fit, tailor your LaTeX CV, draft compelling cover letters, and prepare you for client and technical interviews.
+An AI-powered job search and application operating system designed to run **as it is across Google Antigravity, OpenCode, and Claude Code**. Clone it, configure your profile, and let your AI agent search portals, evaluate fit, tailor your LaTeX CV, draft compelling cover letters, and prepare you for client and technical interviews.
 
 > **Attribution & Provenance:**  
-> This project adapts the proven multi-agent job application methodology originally created for Claude Code by **[Mads Lorentzen](https://github.com/MadsLorentzen/ai-job-search)**. This edition is restructured and optimized natively for **Google Antigravity** by **[Mohamed Waleed](https://github.com/mw205)**.
+> This project builds upon the proven multi-agent job application methodology originally created by **[Mads Lorentzen](https://github.com/MadsLorentzen/ai-job-search)**. This edition is engineered for seamless cross-runtime compatibility with **Google Antigravity**, **OpenCode**, and **Claude Code** by **[Mohamed Waleed](https://github.com/mw205)**.
 
 ---
 
-## Why Google Antigravity?
+## Multi-Runtime Support (Use As It Is)
+
+You can open and run this repository with whichever AI assistant you prefer without altering any configuration:
+
+| AI Runtime | Native Configuration | Workflow Execution |
+| :--- | :--- | :--- |
+| **Google Antigravity** | Reads `AGENTS.md` & `GEMINI.md` | Executes Agent Skills from `.agents/skills/` (`job-setup`, `job-scraper`, `job-apply`, etc.) |
+| **OpenCode** | Reads `AGENTS.md` & `OPENCODE.md` | Automatically discovers and runs skills from `.agents/skills/` |
+| **Claude Code** | Reads `CLAUDE.md` & `.claude/settings.json` | Runs slash commands from `.claude/commands/` (`/setup`, `/scrape`, `/apply`, etc.) |
+
+---
+
+## Core Capabilities
 
 Antigravity's progressive disclosure, native skill discovery (`.agents/skills/`), hierarchical workspace rules (`AGENTS.md`), and subagent orchestration make it the ideal runtime for managing job hunts:
 
